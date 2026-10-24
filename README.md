@@ -2,6 +2,8 @@
 
 > **Automated Weekly Reporting System for the Pembelajaran Taruna Berprestasi (PTB) Program - Ministry of Marine Affairs and Fisheries of Indonesia**
 
+---
+
 ## 1. Project Overview
 
 The **PTB Automated Activity Reporting & Monitoring System** is a workflow automation solution developed during my internship at Indonesia's Ministry of Marine Affairs and Fisheries (*Kementerian Kelautan dan Perikanan - KKP*). The system was designed to streamline the administrative reporting process for the *Pembelajaran Taruna Berprestasi (PTB)* program, in which cadets document their daily learning activities and practical training experiences.
