@@ -46,22 +46,16 @@ Each daily submission must be compiled into a weekly journal containing the cade
 The reporting workflow presents several administrative challenges that can be addressed through automation.
 
 **1. Repetitive Report Compilation**    
-Daily activity submissions must be grouped by cadet and consolidated into a single weekly document. Performing these operations manually introduces repetitive work and increases the possibility of inconsistencies.
-
+Daily activity submissions must be grouped by cadet and consolidated into a single weekly document. Performing these operations manually introduces repetitive work and increases the possibility of inconsistencies.    
 **2. Inconsistent Document Preparation**    
-Weekly journals must follow a standardized format, including personal information, educational program details, activity tables, documentation links, and signature sections. Manually preparing each document can create formatting inconsistencies and unnecessary administrative overhead.
-
-**3. Individual Report Distribution**    
-Each cadet needs to receive their own weekly journal. Distributing reports individually requires matching the correct document to the correct recipient and maintaining an organized reporting process.
-
+Weekly journals must follow a standardized format, including personal information, educational program details, activity tables, documentation links, and signature sections. Manually preparing each document can create formatting inconsistencies and unnecessary administrative overhead.    **3. Individual Report Distribution**    
+Each cadet needs to receive their own weekly journal. Distributing reports individually requires matching the correct document to the correct recipient and maintaining an organized reporting process.    
 **4. Documentation and Approval Workflow**    
 Activity journals must contain links to supporting documentation and provide space for instructor or technician signatures and cadet approval. Missing documentation, incorrect records, or incomplete signature sections can require additional revisions.
 
 ### Business Objective
 
-The objective was to **automate the repetitive stages of weekly activity reporting while maintaining a standardized document structure and an individual reporting workflow for each cadet.**
-
-The intended outcome was a more efficient, consistent, and organized administrative reporting process.
+The objective was to **automate the repetitive stages of weekly activity reporting while maintaining a standardized document structure and an individual reporting workflow for each cadet.** The intended outcome was a more efficient, consistent, and organized administrative reporting process.
 
 ## 4. Solution Approach
 
@@ -142,13 +136,7 @@ The script uses array indexes corresponding to the existing Google Sheets respon
 
 ### 6.2 Weekly Date Filtering
 
-The `getPeriodeMingguan()` function determines the reporting period dynamically.
-
-The reporting window runs from **Monday through Sunday**, based on the script's date-calculation logic.
-
-Each submission is converted into a JavaScript `Date` object and checked against the reporting period. Records outside the selected window are excluded.
-
-This ensures that each generated journal contains activities associated with the relevant reporting week rather than the entire submission history.
+The `getPeriodeMingguan()` function determines the reporting period dynamically. The reporting window runs from **Monday through Sunday**, based on the script's date-calculation logic. Each submission is converted into a JavaScript `Date` object and checked against the reporting period. Records outside the selected window are excluded. This ensures that each generated journal contains activities associated with the relevant reporting week rather than the entire submission history.
 
 ### 6.3 Grouping Records by Cadet
 
@@ -156,19 +144,11 @@ The script groups submissions using a composite key formed from the cadet's name
 
 `nama + "_" + nit`
 
-Each group contains the cadet's identifying information and an array of daily activity records.
-
-This grouping approach allows one personalized journal to be generated for each cadet with qualifying submissions in the reporting period.
-
-It also associates each report with the email address recorded in the corresponding Google Sheets data.
+Each group contains the cadet's identifying information and an array of daily activity records. This grouping approach allows one personalized journal to be generated for each cadet with qualifying submissions in the reporting period. It also associates each report with the email address recorded in the corresponding Google Sheets data.
 
 ### 6.4 Automated Document Generation
 
-The system uses a predefined Google Docs template to maintain a consistent document layout.
-
-For each cadet, the script creates a temporary copy of the template and replaces predefined placeholders with the corresponding data.
-
-Examples of populated fields include:
+The system uses a predefined Google Docs template to maintain a consistent document layout. For each cadet, the script creates a temporary copy of the template and replaces predefined placeholders with the corresponding data. Examples of populated fields include:
 
 - `<<Nama Taruna>>`
 - `<<NIT>>`
@@ -190,41 +170,19 @@ The resulting table contains five columns:
 | Uraian Pembelajaran | Description of the activity performed. |
 | Dokumentasi | Clickable link to supporting documentation, when available. |
 
-Column widths and borders are configured programmatically to maintain a structured report layout.
-
-This eliminates the need to manually construct the activity table for every cadet.
+Column widths and borders are configured programmatically to maintain a structured report layout. This eliminates the need to manually construct the activity table for every cadet.
 
 ### 6.5 Documentation Link Integration
 
-Supporting documentation is incorporated into the weekly journal through clickable links.
-
-When a documentation field contains a URL beginning with `http`, the script creates a hyperlink labeled **"Lihat Dokumentasi"**.
-
-If no valid documentation URL is available, the corresponding cell is populated with a dash (`-`).
-
-This allows the report to reference supporting materials without embedding all documentation directly into the generated document.
+Supporting documentation is incorporated into the weekly journal through clickable links. When a documentation field contains a URL beginning with `http`, the script creates a hyperlink labeled **"Lihat Dokumentasi"**. If no valid documentation URL is available, the corresponding cell is populated with a dash (`-`). This allows the report to reference supporting materials without embedding all documentation directly into the generated document.
 
 ### 6.6 Instructor and Technician Management
 
-The script consolidates instructor or technician names from the activity records associated with each cadet.
-
-The `splitInstruktur()` function separates instructor names while attempting to preserve professional titles containing commas.
-
-The `getAllInstruktur()` function then removes duplicate names so that the signature section does not unnecessarily repeat the same instructor or technician.
-
-The `formatInstrukturRapi()` function formats the resulting list into a numbered sequence.
-
-Finally, `buatTabelTTD()` dynamically generates signature tables containing spaces for instructor or technician signatures and the cadet's signature.
-
-This accommodates varying numbers of instructors or technicians associated with the reported activities.
+The script consolidates instructor or technician names from the activity records associated with each cadet. The `splitInstruktur()` function separates instructor names while attempting to preserve professional titles containing commas. The `getAllInstruktur()` function then removes duplicate names so that the signature section does not unnecessarily repeat the same instructor or technician. The `formatInstrukturRapi()` function formats the resulting list into a numbered sequence. Finally, `buatTabelTTD()` dynamically generates signature tables containing spaces for instructor or technician signatures and the cadet's signature. This accommodates varying numbers of instructors or technicians associated with the reported activities.
 
 ### 6.7 DOCX Export
 
-After populating the Google Docs template, the script saves and closes the document.
-
-It then exports the generated document as a Microsoft Word-compatible `.docx` file using an authenticated HTTP request and the Google Docs document export endpoint.
-
-The output filename follows this structure:
+After populating the Google Docs template, the script saves and closes the document. It then exports the generated document as a Microsoft Word-compatible `.docx` file using an authenticated HTTP request and the Google Docs document export endpoint. The output filename follows this structure:
 
 `Jurnal_Harian_[CadetName]_[StartDate]_sd_[EndDate].docx`
 
@@ -232,15 +190,11 @@ For example:
 
 `Jurnal_Harian_Aditya_Bagas_Sadewa_2026-05-11_sd_2026-05-17.docx`
 
-The naming convention incorporates the cadet's name and reporting period, making generated reports easier to identify and organize.
-
-Special characters are removed from the cadet's name when constructing the filename.
+The naming convention incorporates the cadet's name and reporting period, making generated reports easier to identify and organize. Special characters are removed from the cadet's name when constructing the filename.
 
 ### 6.8 Automated Email Distribution
 
-The script uses `GmailApp.sendEmail()` to send each generated journal to the corresponding cadet.
-
-The email includes:
+The script uses `GmailApp.sendEmail()` to send each generated journal to the corresponding cadet. The email includes:
 
 - A personalized greeting.
 - The weekly reporting period.
@@ -249,25 +203,15 @@ The email includes:
 - A reminder to insert photographic documentation into the designated section.
 - The generated `.docx` document as an attachment.
 
-The email subject also includes the program name and reporting period.
-
-The message identifies the email as an automated notification and advises recipients not to reply.
+The email subject also includes the program name and reporting period. The message identifies the email as an automated notification and advises recipients not to reply.
 
 ### 6.9 Google Drive Storage and Temporary File Cleanup
 
-After sending the email, the script saves a copy of the generated `.docx` file in a designated Google Drive folder.
-
-It then moves the temporary Google Docs file to the trash.
-
-This separates the final report archive from the temporary document-generation process and helps prevent temporary working documents from accumulating in the designated workflow.
+After sending the email, the script saves a copy of the generated `.docx` file in a designated Google Drive folder. It then moves the temporary Google Docs file to the trash. This separates the final report archive from the temporary document-generation process and helps prevent temporary working documents from accumulating in the designated workflow.
 
 ### 6.10 Error Handling and Execution Logging
 
-The document-generation and distribution process for each cadet is wrapped in a `try...catch` block.
-
-Successful processing is recorded in the execution log with a success message. Errors are recorded with the relevant cadet name and error details.
-
-This provides basic operational visibility when reviewing script executions and helps identify records that encounter processing failures.
+The document-generation and distribution process for each cadet is wrapped in a `try...catch` block. Successful processing is recorded in the execution log with a success message. Errors are recorded with the relevant cadet name and error details. This provides basic operational visibility when reviewing script executions and helps identify records that encounter processing failures.
 
 ## 7. Key Functions
 
@@ -289,35 +233,17 @@ The script is organized into functions that separate the main workflow from form
 
 The primary value of this solution is the automation of a recurring administrative workflow.
 
-### Reduced Manual Administrative Work
+**1. Reduced Manual Administrative Work**    
+The system automates repetitive operations such as grouping submissions, filling document templates, constructing activity tables, preparing email messages, and distributing report attachments. This reduces the amount of manual intervention required for routine weekly reporting.
+**2. Standardized Reporting Documents**    
+A shared template and programmatically generated tables establish a consistent report structure across cadets. Standardization makes the reports easier to review and supports a more organized documentation process.
+**3. More Organized Reporting and Documentation**    
+Individual journals are generated using cadet-specific information and reporting periods. Documentation URLs are integrated into the activity tables, while generated reports are stored in a designated Google Drive folder. This creates a structured workflow for distributing and retaining weekly reports.
+**4. Improved Distribution Consistency**    
+The automation uses the email address associated with each cadet's grouped records to determine the report recipient. This reduces repetitive manual distribution tasks and supports individual report delivery.
 
-The system automates repetitive operations such as grouping submissions, filling document templates, constructing activity tables, preparing email messages, and distributing report attachments.
-
-This reduces the amount of manual intervention required for routine weekly reporting.
-
-### Standardized Reporting Documents
-
-A shared template and programmatically generated tables establish a consistent report structure across cadets.
-
-Standardization makes the reports easier to review and supports a more organized documentation process.
-
-### More Organized Reporting and Documentation
-
-Individual journals are generated using cadet-specific information and reporting periods. Documentation URLs are integrated into the activity tables, while generated reports are stored in a designated Google Drive folder.
-
-This creates a structured workflow for distributing and retaining weekly reports.
-
-### Improved Distribution Consistency
-
-The automation uses the email address associated with each cadet's grouped records to determine the report recipient.
-
-This reduces repetitive manual distribution tasks and supports individual report delivery.
-
-### Support for Review and Approval
-
-Generated journals include signature sections for the instructors or technicians and cadets. Recipients are also instructed to review and correct their reports before coordinating the signing process.
-
-The system therefore supports the administrative steps required to move from daily activity submissions to reviewable weekly journals.
+**5. Support for Review and Approval**    
+Generated journals include signature sections for the instructors or technicians and cadets. Recipients are also instructed to review and correct their reports before coordinating the signing process. The system therefore supports the administrative steps required to move from daily activity submissions to reviewable weekly journals.
 
 **Business impact note:** These benefits describe the capabilities and intended value of the implemented workflow. Quantified improvements in processing time, error rates, or administrative workload have not been measured in the available project materials.
 
@@ -368,11 +294,7 @@ These improvements would expand the system from a document-generation workflow i
 
 ## 12. Project Reflection
 
-This project provided practical experience in applying programming and automation to an operational administrative process within a government institution.
-
-Rather than treating data collection and reporting as isolated activities, the solution connects multiple stages of the workflow—from daily submissions to individualized report delivery.
-
-The project also demonstrates how existing cloud productivity tools can be integrated to solve practical business problems without requiring a dedicated application or a separate database infrastructure.
+This project provided practical experience in applying programming and automation to an operational administrative process within a government institution. Rather than treating data collection and reporting as isolated activities, the solution connects multiple stages of the workflow from daily submissions to individualized report delivery. The project also demonstrates how existing cloud productivity tools can be integrated to solve practical business problems without requiring a dedicated application or a separate database infrastructure.
 
 Key areas of experience include:
 
@@ -408,13 +330,7 @@ Do not publish actual spreadsheet IDs, Google Docs template IDs, private Drive f
 
 ## 14. Conclusion
 
-The PTB Automated Activity Reporting & Monitoring System demonstrates how workflow automation can improve the consistency and organization of recurring administrative reporting.
-
-By integrating Google Forms, Google Sheets, Google Apps Script, Google Docs, Gmail, and Google Drive, the solution transforms daily activity submissions into individualized weekly journals that can be reviewed, edited, signed, and archived.
-
-The project combines data processing, document automation, and workflow integration to address a practical operational need within the Pembelajaran Taruna Berprestasi program.
-
-It represents an application of programming and process automation to a real-world administrative challenge, with opportunities for further development in reporting completeness monitoring, operational reliability, and dashboard-based oversight.
+The PTB Automated Activity Reporting & Monitoring System demonstrates how workflow automation can improve the consistency and organization of recurring administrative reporting. By integrating Google Forms, Google Sheets, Google Apps Script, Google Docs, Gmail, and Google Drive, the solution transforms daily activity submissions into individualized weekly journals that can be reviewed, edited, signed, and archived. The project combines data processing, document automation, and workflow integration to address a practical operational need within the Pembelajaran Taruna Berprestasi program. It represents an application of programming and process automation to a real-world administrative challenge, with opportunities for further development in reporting completeness monitoring, operational reliability, and dashboard-based oversight.
 
 ---
 
