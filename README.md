@@ -88,24 +88,6 @@ This approach preserves a standardized reporting format while minimizing the nee
 
 The system follows a straightforward data-to-document automation architecture.
 
-```mermaid
-flowchart TD
-    A[Cadets Submit Daily Reports] --> B[Google Forms]
-    B --> C[Google Sheets]
-    C --> D[Google Apps Script]
-    D --> E[Filter Weekly Reporting Period]
-    E --> F[Group Records by Cadet]
-    F --> G[Copy Google Docs Template]
-    G --> H[Populate Personal Information]
-    H --> I[Generate Activity Table]
-    I --> J[Add Documentation Links]
-    J --> K[Generate Signature Sections]
-    K --> L[Export to DOCX]
-    L --> M[Send Personalized Email via Gmail]
-    L --> N[Save Report to Google Drive]
-    M --> O[Cadet Reviews and Edits Journal]
-    O --> P[Coordinate Signatures with Instructor]
-```
 ![PTB System Architecture](images/PTB_automated_reporting_workflow.png)
 
 ### Component Responsibilities
