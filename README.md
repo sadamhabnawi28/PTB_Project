@@ -235,10 +235,13 @@ The primary value of this solution is the automation of a recurring administrati
 
 **1. Reduced Manual Administrative Work**    
 The system automates repetitive operations such as grouping submissions, filling document templates, constructing activity tables, preparing email messages, and distributing report attachments. This reduces the amount of manual intervention required for routine weekly reporting.
+
 **2. Standardized Reporting Documents**    
 A shared template and programmatically generated tables establish a consistent report structure across cadets. Standardization makes the reports easier to review and supports a more organized documentation process.
+
 **3. More Organized Reporting and Documentation**    
 Individual journals are generated using cadet-specific information and reporting periods. Documentation URLs are integrated into the activity tables, while generated reports are stored in a designated Google Drive folder. This creates a structured workflow for distributing and retaining weekly reports.
+
 **4. Improved Distribution Consistency**    
 The automation uses the email address associated with each cadet's grouped records to determine the report recipient. This reduces repetitive manual distribution tasks and supports individual report delivery.
 
