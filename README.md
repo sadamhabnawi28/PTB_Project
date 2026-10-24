@@ -4,13 +4,9 @@
 
 ## 1. Project Overview
 
-The **PTB Automated Activity Reporting & Monitoring System** is a workflow automation solution developed during my internship at Indonesia's Ministry of Marine Affairs and Fisheries (*Kementerian Kelautan dan Perikanan — KKP*).
+The **PTB Automated Activity Reporting & Monitoring System** is a workflow automation solution developed during my internship at Indonesia's Ministry of Marine Affairs and Fisheries (*Kementerian Kelautan dan Perikanan - KKP*). The system was designed to streamline the administrative reporting process for the *Pembelajaran Taruna Berprestasi (PTB)* program, in which cadets document their daily learning activities and practical training experiences.
 
-The system was designed to streamline the administrative reporting process for the *Pembelajaran Taruna Berprestasi (PTB)* program, in which cadets document their daily learning activities and practical training experiences.
-
-Previously, daily activity records needed to be compiled into structured weekly journals for reporting and approval. This process involved organizing individual submissions, preparing standardized documents, and distributing the reports to the respective cadets.
-
-To improve this workflow, I developed an automation script using **Google Apps Script** that processes daily activity submissions, generates personalized weekly journals in Microsoft Word format (`.docx`), and automatically distributes them to individual cadets via email.
+Previously, daily activity records needed to be compiled into structured weekly journals for reporting and approval. This process involved organizing individual submissions, preparing standardized documents, and distributing the reports to the respective cadets. To improve this workflow, I developed an automation script using **Google Apps Script** that processes daily activity submissions, generates personalized weekly journals in Microsoft Word format (`.docx`), and automatically distributes them to individual cadets via email.
 
 The solution integrates Google Forms, Google Sheets, Google Docs, Google Drive, and Gmail into a single reporting workflow, reducing repetitive administrative work and establishing a more consistent reporting process.
 
@@ -24,6 +20,7 @@ The solution integrates Google Forms, Google Sheets, Google Docs, Google Drive, 
 | Program | Pembelajaran Taruna Berprestasi (PTB) |
 | Primary Users | Cadets, instructors, and technical supervisors |
 | Primary Technology | Google Apps Script |
+| Programming Language | JavaScript|
 | Data Collection | Google Forms |
 | Data Storage | Google Sheets |
 | Document Generation | Google Docs and Microsoft Word (`.docx`) |
@@ -32,9 +29,7 @@ The solution integrates Google Forms, Google Sheets, Google Docs, Google Drive, 
 
 ## 2. Business Context
 
-The PTB program requires cadets to record their daily learning activities, including practical training, learning topics, activity descriptions, supporting documentation, and instructor or technician information.
-
-These records serve as documentation of the cadets' learning progress and practical experiences.
+The PTB program requires cadets to record their daily learning activities, including practical training, learning topics, activity descriptions, supporting documentation, and instructor or technician information. These records serve as documentation of the cadet's learning progress and practical experiences.
 
 For example, activities in the fish cultivation program may include:
 
@@ -44,33 +39,23 @@ For example, activities in the fish cultivation program may include:
 - Monitoring embryonic development.
 - Performing other practical activities under instructor or technician supervision.
 
-Each daily submission must be compiled into a weekly journal containing the cadet's personal and educational information, activity records, documentation links, and signature areas for the relevant parties.
-
-The system transforms these individual daily submissions into structured weekly reports that can be reviewed, edited, and signed.
+Each daily submission must be compiled into a weekly journal containing the cadet's personal and educational information, activity records, documentation links, and signature areas for the relevant parties. The system transforms these individual daily submissions into structured weekly reports that can be reviewed, edited, and signed.
 
 ## 3. Business Problem
 
 The reporting workflow presents several administrative challenges that can be addressed through automation.
 
-### 3.1 Repetitive Report Compilation
-
+**1. Repetitive Report Compilation**    
 Daily activity submissions must be grouped by cadet and consolidated into a single weekly document. Performing these operations manually introduces repetitive work and increases the possibility of inconsistencies.
 
-### 3.2 Inconsistent Document Preparation
+**2. Inconsistent Document Preparation**    
+Weekly journals must follow a standardized format, including personal information, educational program details, activity tables, documentation links, and signature sections. Manually preparing each document can create formatting inconsistencies and unnecessary administrative overhead.
 
-Weekly journals must follow a standardized format, including personal information, educational program details, activity tables, documentation links, and signature sections.
-
-Manually preparing each document can create formatting inconsistencies and unnecessary administrative overhead.
-
-### 3.3 Individual Report Distribution
-
+**3. Individual Report Distribution**    
 Each cadet needs to receive their own weekly journal. Distributing reports individually requires matching the correct document to the correct recipient and maintaining an organized reporting process.
 
-### 3.4 Documentation and Approval Workflow
-
-Activity journals must contain links to supporting documentation and provide space for instructor or technician signatures and cadet approval.
-
-Missing documentation, incorrect records, or incomplete signature sections can require additional revisions.
+**4. Documentation and Approval Workflow**    
+Activity journals must contain links to supporting documentation and provide space for instructor or technician signatures and cadet approval. Missing documentation, incorrect records, or incomplete signature sections can require additional revisions.
 
 ### Business Objective
 
