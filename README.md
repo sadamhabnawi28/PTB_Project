@@ -220,7 +220,7 @@ The document-generation and distribution process for each cadet is wrapped in a 
 
 ## 7. Key Functions
 
-The script is organized into functions that separate the main workflow from formatting and data-processing tasks.
+The script is organized into functions that separate the main workflow from formatting and data-processing tasks. [*See full script*](https://github.com/sadamhabnawi28/PTB_Project/blob/86496df79572d3b77571288210a8e311a10cc0f4/script/code.gs)
 
 | Function | Purpose |
 |---|---|
