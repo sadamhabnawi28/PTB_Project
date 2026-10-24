@@ -1,6 +1,6 @@
 # PTB Automated Activity Reporting & Monitoring System
 
-**Automated Weekly Reporting System for the Pembelajaran Taruna Berprestasi (PTB) Program — Ministry of Marine Affairs and Fisheries of Indonesia**
+> **Automated Weekly Reporting System for the Pembelajaran Taruna Berprestasi (PTB) Program - Ministry of Marine Affairs and Fisheries of Indonesia**
 
 ## 1. Project Overview
 
