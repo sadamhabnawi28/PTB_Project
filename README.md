@@ -306,32 +306,8 @@ Key areas of experience include:
 - Automating email distribution and document archiving.
 - Implementing basic execution logging and error handling.
 
-## 13. Repository Contents
-
-The repository can be organized as follows:
-
-```text
-ptb-automated-reporting-system/
-├── README.md
-├── script(1).txt
-├── docs/
-│   └── images/
-│       ├── system-workflow.png
-│       └── sample-weekly-journal.png
-└── assets/
-    └── project-banner.png
-```
-
-The structure above is a suggested organization for the portfolio repository. The image files are placeholders for documentation assets and should only be included once the corresponding images have been prepared.
-
-For security and privacy, the public repository should contain sanitized source code and anonymized examples rather than operational data.
-
-Do not publish actual spreadsheet IDs, Google Docs template IDs, private Drive folder IDs, email addresses, personal identification numbers, or real cadet records. Use fictional sample data and screenshots with sensitive information removed.
-
-## 14. Conclusion
+## 13. Conclusion
 
 The PTB Automated Activity Reporting & Monitoring System demonstrates how workflow automation can improve the consistency and organization of recurring administrative reporting. By integrating Google Forms, Google Sheets, Google Apps Script, Google Docs, Gmail, and Google Drive, the solution transforms daily activity submissions into individualized weekly journals that can be reviewed, edited, signed, and archived. The project combines data processing, document automation, and workflow integration to address a practical operational need within the Pembelajaran Taruna Berprestasi program. It represents an application of programming and process automation to a real-world administrative challenge, with opportunities for further development in reporting completeness monitoring, operational reliability, and dashboard-based oversight.
 
 ---
-
-**Project contribution:** Development of the Google Apps Script workflow for weekly activity data processing, personalized document generation, automated email distribution, and report archiving during an internship at Indonesia's Ministry of Marine Affairs and Fisheries.
