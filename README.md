@@ -319,3 +319,13 @@ Key areas of experience include:
 The PTB Automated Activity Reporting & Monitoring System demonstrates how workflow automation can improve the consistency and organization of recurring administrative reporting. By integrating Google Forms, Google Sheets, Google Apps Script, Google Docs, Gmail, and Google Drive, the solution transforms daily activity submissions into individualized weekly journals that can be reviewed, edited, signed, and archived. The project combines data processing, document automation, and workflow integration to address a practical operational need within the Pembelajaran Taruna Berprestasi program. It represents an application of programming and process automation to a real-world administrative challenge, with opportunities for further development in reporting completeness monitoring, operational reliability, and dashboard-based oversight.
 
 ---
+
+## 14. About Me
+
+Hi there! I'm **Sadam Habnawi**. I'm a physics fresh graduate, i have a great enthusiasm in the field of data including data analytics, engineering, and data science!
+
+Let's stay in touch! Feel free to connect with me on the following platforms:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](http://www.linkedin.com/in/sadam-habnawi-7621011b4)
+
+---
