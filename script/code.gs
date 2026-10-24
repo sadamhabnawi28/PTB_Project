@@ -1,4 +1,4 @@
-function testGenerateSemuaTaruna() {
+function generateWeeklyReports() {
   var SPREADSHEET_ID = "1R67WyOUpf8IqZ1rNRDlMig_G88uA9QOORKRXHQKTy64";
   var templateId = "1l46acEx60-FrU3s0ZB7tNQsteD9Azej_PEHIABx70nE";
   var folderId = "1fRSB2Xgpoi7yk5YmX1junaVJpq3d6zyb";
