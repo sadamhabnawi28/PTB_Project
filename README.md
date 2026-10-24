@@ -104,6 +104,7 @@ flowchart TD
     M --> O[Cadet Reviews and Edits Journal]
     O --> P[Coordinate Signatures with Instructor]
 ```
+![PTB System Architecture](images/PTB_automated_reporting_workflow.png)
 
 ### Component Responsibilities
 
