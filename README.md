@@ -47,9 +47,13 @@ The reporting workflow presents several administrative challenges that can be ad
 
 **1. Repetitive Report Compilation**    
 Daily activity submissions must be grouped by cadet and consolidated into a single weekly document. Performing these operations manually introduces repetitive work and increases the possibility of inconsistencies.    
+
 **2. Inconsistent Document Preparation**    
-Weekly journals must follow a standardized format, including personal information, educational program details, activity tables, documentation links, and signature sections. Manually preparing each document can create formatting inconsistencies and unnecessary administrative overhead.    **3. Individual Report Distribution**    
+Weekly journals must follow a standardized format, including personal information, educational program details, activity tables, documentation links, and signature sections. Manually preparing each document can create formatting inconsistencies and unnecessary administrative overhead.    
+
+**3. Individual Report Distribution**    
 Each cadet needs to receive their own weekly journal. Distributing reports individually requires matching the correct document to the correct recipient and maintaining an organized reporting process.    
+
 **4. Documentation and Approval Workflow**    
 Activity journals must contain links to supporting documentation and provide space for instructor or technician signatures and cadet approval. Missing documentation, incorrect records, or incomplete signature sections can require additional revisions.
 
