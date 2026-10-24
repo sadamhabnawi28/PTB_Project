@@ -322,7 +322,7 @@ The PTB Automated Activity Reporting & Monitoring System demonstrates how workfl
 
 ## 14. About Me
 
-Hi there! I'm **Sadam Habnawi**. I'm a physics fresh graduate, i have a great enthusiasm in the field of data including data analytics, engineering, and data science!
+Hi there! I'm **Sadam Habnawi**. I'm a physics graduate, i have a great enthusiasm in the field of data including data analytics, engineering, and data science!
 
 Let's stay in touch! Feel free to connect with me on the following platforms:
 
