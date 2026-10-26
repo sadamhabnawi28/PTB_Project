@@ -88,7 +88,7 @@ This approach preserves a standardized reporting format while minimizing the nee
 
 The system follows a straightforward data-to-document automation architecture.
 
-![PTB System Architecture](images/PTB_automated_reporting_workflow.png)
+![PTB System Architecture](images/PTB_automated_activity_reporting_workflow.png)
 
 ### Component Responsibilities
 
