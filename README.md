@@ -1,4 +1,4 @@
-# PTB Automated Activity Reporting & Monitoring System
+# PTB Automated Activity Reporting System
 
 > **Automated Weekly Reporting System for the Pembelajaran Taruna Berprestasi (PTB) Program - Ministry of Marine Affairs and Fisheries of Indonesia**
 
@@ -6,7 +6,7 @@
 
 ## 1. Project Overview
 
-The **PTB Automated Activity Reporting & Monitoring System** is a workflow automation solution developed during my internship at Indonesia's Ministry of Marine Affairs and Fisheries (*Kementerian Kelautan dan Perikanan - KKP*). The system was designed to streamline the administrative reporting process for the *Pembelajaran Taruna Berprestasi (PTB)* program, in which cadets document their daily learning activities and practical training experiences.
+The **PTB Automated Activity Reporting System** is a workflow automation solution developed during my internship at Indonesia's Ministry of Marine Affairs and Fisheries (*Kementerian Kelautan dan Perikanan - KKP*). The system was designed to streamline the administrative reporting process for the *Pembelajaran Taruna Berprestasi (PTB)* program, in which cadets document their daily learning activities and practical training experiences.
 
 Previously, daily activity records needed to be compiled into structured weekly journals for reporting and approval. This process involved organizing individual submissions, preparing standardized documents, and distributing the reports to the respective cadets. To improve this workflow, I developed an automation script using **Google Apps Script** that processes daily activity submissions, generates personalized weekly journals in Microsoft Word format (`.docx`), and automatically distributes them to individual cadets via email.
 
@@ -300,7 +300,7 @@ Key areas of experience include:
 
 ## 13. Conclusion
 
-The PTB Automated Activity Reporting & Monitoring System demonstrates how workflow automation can improve the consistency and organization of recurring administrative reporting. By integrating Google Forms, Google Sheets, Google Apps Script, Google Docs, Gmail, and Google Drive, the solution transforms daily activity submissions into individualized weekly journals that can be reviewed, edited, signed, and archived. The project combines data processing, document automation, and workflow integration to address a practical operational need within the Pembelajaran Taruna Berprestasi program. It represents an application of programming and process automation to a real-world administrative challenge, with opportunities for further development in reporting completeness monitoring, operational reliability, and dashboard-based oversight.
+The PTB Automated Activity Reporting System demonstrates how workflow automation can improve the consistency and organization of recurring administrative reporting. By integrating Google Forms, Google Sheets, Google Apps Script, Google Docs, Gmail, and Google Drive, the solution transforms daily activity submissions into individualized weekly journals that can be reviewed, edited, signed, and archived. The project combines data processing, document automation, and workflow integration to address a practical operational need within the Pembelajaran Taruna Berprestasi program. It represents an application of programming and process automation to a real-world administrative challenge, with opportunities for further development in reporting completeness monitoring, operational reliability, and dashboard-based oversight.
 
 ---
 
